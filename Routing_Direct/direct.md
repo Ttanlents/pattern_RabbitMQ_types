@@ -1,0 +1,4 @@
+在Routing模式下（Exchange类型为direct，也叫直连模式）消息的发送会指定一
+个routing key，Exchange会根据此Routing Key来路由到指定的Queues，
+类似于拉了100人进微信群，但是你只想让这100人里面是部门主管的人接受到
+你的消息

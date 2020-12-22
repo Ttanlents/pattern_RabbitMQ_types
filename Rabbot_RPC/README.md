@@ -1,0 +1,8 @@
+严格意义上来说RPC并不是一种新的交换模式，他其实还是借助原有的模式
+（上述案例是采用Work模式）来达到一些不同的功能，在RPC模式中只有客户端和
+服务端，并且客户端和服务端都既是Producer也是Consumer；
+
+在RPC模式中，使用到了CorrelationId来解决回调队列问题，
+如果没有CorrelationId则需要为每一个PRC请求创建一个单一的回调队列，
+效率较低，有了CorrelationId之后，一个客户端永远使用CorrelationId对
+应的队列；
